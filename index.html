@@ -19,7 +19,8 @@
         </div>
         <div>
             <label for="fone">Telefone:</label>
-            <input type="text" id="fone" value="(62)">
+            <input type="text" id="fone" value="(62)&nbsp;" maxlength="15" oninput="this.value = this.value.length === 10 ? this.value + '-' : this.value">
+            
         </div>
         </div>
 
@@ -66,6 +67,10 @@
                 <input type="text" id="rua">
             </div>
             <div>
+                <label for="numero">Nº</label>
+                <input type="text" id="numero">
+            </div>
+            <div>
                 <label for="bairro">Bairro:</label>
                 <input type="text" id="bairro">
             </div>
@@ -79,7 +84,7 @@
         </div>
         </fieldset>
 
-        <button type="submit">Salvar cliente</button>
+        <button id="saveClient" type="submit">Salvar cliente</button>
     </form>
     <script src="script.js"></script>
 </body>
