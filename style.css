@@ -1,9 +1,56 @@
+* { margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 body {
     background-color: white;
-    
+    padding: 0 300px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
 }
 
 h1 {
     text-align: center;
-    border-bottom: black;
+    background-color: rgb(211, 211, 211);
 }
+ 
+input, select, fieldset {
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #3498db
+}
+
+
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-row div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#fone {
+    width: 200px;
+    flex: none;
+}
+
+#cep, #cidade {
+    width: 150px;
+    flex: none;
+}
+
