@@ -4,9 +4,21 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     background-color: white;
-    padding: 0 300px;
+    padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif';
+    margin: 0;
+}
+
+.container{
+    width: 95%;          /* No celular, usa quase tudo */
+    max-width: 850px;    /* No monitor grande, ele para aqui e não fica "feio" */
+    margin: 0px auto;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -39,6 +51,8 @@ input, select {
     height: 30px;
     font-size: 14px;
     color: 555;
+    width: 100%; 
+    box-sizing: border-box;
 }
 
 fieldset {
@@ -156,11 +170,40 @@ input:checked + .slider::before {transform: translateX(26px);}
 }
 
 #saveClient {
-    background-color: #d3d3d3;
-    border: 2px solid #a3a3a3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 30px auto;
+    background-color: #0084ff;
+    border: 2px solid #0084ff;
     padding: 8px 20px;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 600px;
+    font-weight: bold;
+    color: #ddd;
+    width: fit-content;
+    min-width: 200px;
 }
 
+@media (max-width: 650px) {
+    /* Faz as linhas virarem colunas */
+    .form-row {
+        flex-direction: column !important; 
+        gap: 10px !important;
+    }
+
+    /* Garante que NENHUM campo tenha largura fixa no celular */
+    input, select, #fone, #cep, #rua, #numero, #sexo, #aniversario {
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    /* Centraliza o título e o botão no mobile */
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    #saveClient {
+        width: 100%;
+        margin-left: 0 !important; /* Mata de vez qualquer empurrão lateral */
+    }
+}

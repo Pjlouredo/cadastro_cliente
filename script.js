@@ -89,25 +89,40 @@ btnSalvar.addEventListener('click', (event) =>{
         }
     };
 
-    fetch("https://cadastro-cliente.free.beeceptor.com/salvar", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(dadosDoCliente)
-    });
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (cpfSalvo.length !== 11) {
         alert("CPF inválido");
         return
     }
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     if (!emailPattern.test(emailInput.value)){
         alert("Insira um email válido.");
         return;
     }
+    
 
-    console.log("--- Dados do Cliente ---");
+    fetch("https://cadastro-cliente.free.beeceptor.com/salvar", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(dadosDoCliente)
+    })
+    .then(res => {
+        if (!res.ok) throw new Error("Erro na rede");
+        return res.json();
+    })
+        .then(dados => {
+        alert(dados.mensagem);
+        console.log("Sucesso:", dados.mensagem);
+    })
+    .catch(err => {
+        alert("Ops! Algo deu errado ao salvar.");
+        console.error(err);
+    });
+    
+    
+
+        console.log("--- Dados do Cliente ---");
     console.log("Nome:", nomeSalvo);
     console.log("Telefone:", foneSalvo);
     console.log("Email:", emailSalvo);

@@ -8,7 +8,9 @@
 </head>
 <body>
 
-    <h1>Casdrastro de clientes</h1><br>
+    <div class="container">
+
+    <h1>Casdastro de clientes</h1><br>
 
     <form id="formCadastro">
         <fieldset>
@@ -49,7 +51,7 @@
                 <label for="aniversario">Aniversário</label>
                 <input type="date" name="aniversario" id="aniversario">
             </div>
-            <div>
+            <div style="display: none;">
                 <label for="sexo">Sexo:</label>
                 <select id="sexo">
                     <option value="">Selecione</option>
@@ -96,5 +98,6 @@
         <button id="saveClient" type="submit">Salvar cliente</button><br><br>
     </form>
     <script src="script.js"></script>
+    </div>
 </body>
 </html>
