@@ -14,8 +14,8 @@ body {
 }
 
 .container{
-    width: 95%;          /* No celular, usa quase tudo */
-    max-width: 850px;    /* No monitor grande, ele para aqui e não fica "feio" */
+    width: 95%;          
+    max-width: 850px;    
     margin: 0px auto;
     padding: 10px;
     box-sizing: border-box;
@@ -185,25 +185,24 @@ input:checked + .slider::before {transform: translateX(26px);}
 }
 
 @media (max-width: 650px) {
-    /* Faz as linhas virarem colunas */
-    .form-row {
+       .form-row {
         flex-direction: column !important; 
         gap: 10px !important;
     }
 
-    /* Garante que NENHUM campo tenha largura fixa no celular */
+   
     input, select, #fone, #cep, #rua, #numero, #sexo, #aniversario {
         width: 100% !important;
         flex: none !important;
     }
 
-    /* Centraliza o título e o botão no mobile */
+    
     h1 {
         font-size: 1.2rem;
     }
 
     #saveClient {
         width: 100%;
-        margin-left: 0 !important; /* Mata de vez qualquer empurrão lateral */
+        margin-left: 0 !important; 
     }
 }
