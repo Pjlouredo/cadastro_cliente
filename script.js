@@ -39,6 +39,24 @@ foneInput.addEventListener('focus', () =>{
     foneInput.setSelectionRange(fim, fim);
 });
 
+cepInput.addEventListener('blur', () => {
+    let cep = cepInput.value.replace(/\D/g, "");
+
+    if (cep.length === 8) {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(resposta => resposta.json())
+        .then(dados => {
+            if (!dados.erro) {
+                ruaInput.value = dados.logradouro;
+                bairroInput.value = dados.bairro;
+                cidadeInput.value = dados.localidade;
+            } else {
+                alert("CEP não existe!")
+            }
+        });
+    }
+});
+
 console.log("1. Variáveis mapeadas!");
 
 btnSalvar.addEventListener('click', (event) =>{
@@ -57,6 +75,25 @@ btnSalvar.addEventListener('click', (event) =>{
     const numeroSalvo = numeroInput.value;
     const bairroSalvo = bairroInput.value;
     const cidadeSalvo = cidadeInput.value;
+
+    const dadosDoCliente = {
+        nome: nomeSalvo,
+        telefone: foneSalvo,
+        email: emailSalvo,
+        cpf: cpfSalvo,
+        endereco: {
+            cep: cepSalvo,
+            rua: ruaSalvo,
+            numero: numeroSalvo,
+            cidade: cidadeSalvo
+        }
+    };
+
+    fetch("https://cadastro-cliente.free.beeceptor.com/salvar", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(dadosDoCliente)
+    });
 
     if (cpfSalvo.length !== 11) {
         alert("CPF inválido");
