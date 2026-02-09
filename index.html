@@ -22,6 +22,15 @@
             <input type="text" id="fone" value="(62) " maxlength="14">
             
         </div>
+
+        <div class="toggle-container">
+            <label>Bloquear cliente?</label>
+            <label class="switch">
+                <input type="checkbox" id="bloquear">
+                <span class="slider"></span>
+            </label>
+        </div>
+
         </div>
 
         <div class="form-row">
@@ -43,9 +52,9 @@
             <div>
                 <label for="sexo">Sexo:</label>
                 <select id="sexo">
-                    <option value="">---</option>
-                    <option value="M">M</option>
-                    <option value="F">F</option>
+                    <option value="">Selecione</option>
+                    <option value="M">Maculino</option>
+                    <option value="F">Feminino</option>
                 </select>
             </div>
         </div>     
@@ -84,7 +93,7 @@
         </div>
         </fieldset>
 
-        <button id="saveClient" type="submit">Salvar cliente</button>
+        <button id="saveClient" type="submit">Salvar cliente</button><br><br>
     </form>
     <script src="script.js"></script>
 </body>
