@@ -57,6 +57,10 @@ cepInput.addEventListener('blur', () => {
     }
 });
 
+numeroInput.addEventListener('input', () => {
+    numeroInput.value = numeroInput.value.replace (/\D/g, "");
+});
+
 console.log("1. Variáveis mapeadas!");
 
 btnSalvar.addEventListener('click', (event) =>{
@@ -137,3 +141,20 @@ btnSalvar.addEventListener('click', (event) =>{
     console.log("------------------------");
 
 });
+const btnAgenda = document.getElementById('btn-agenda');
+const btnCliente = document.getElementById('btn-cliente');
+const telaAgenda = document.getElementById('tela-agenda');
+const telaCadastro = document.getElementById('tela-cadastro');
+
+btnAgenda.addEventListener('click', () => {
+    telaAgenda.hidden = false;
+    telaCadastro.hidden = true;
+});
+
+btnCliente.addEventListener('click', () => {
+    telaAgenda.hidden = true;
+    telaCadastro.hidden = false;
+});
+
+
+

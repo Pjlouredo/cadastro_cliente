@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de cliente</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
+    <div class="topo"><img src="img/logo.png" alt=""><h1>Barbearia Louredo</h1></div>
+
+    <nav class="menu-lateral">
+ <ul>
+    <li id="btn-agenda" style="cursor: pointer;">
+        <i  class="fa fa-calendar"></i> Agenda</li>
+    <li id="btn-cliente" style="cursor: pointer;">
+        <i class="fa fa-users"></i> Clientes</li>
+    <li id="financeiro" style="cursor: pointer;">
+        <i class="fa fa-money"></i> Financeiro</li>
+</ul>
+</nav>
+
     <div class="container">
+    <div id="tela-cadastro">
 
     <h1>Casdastro de clientes</h1><br>
 
@@ -79,7 +95,7 @@
             </div>
             <div>
                 <label for="numero">Nº</label>
-                <input type="text" id="numero">
+                <input type="tel" id="numero">
             </div>
             <div>
                 <label for="bairro">Bairro:</label>
@@ -97,7 +113,26 @@
 
         <button id="saveClient" type="submit">Salvar cliente</button><br><br>
     </form>
+    </div>
+    
+    <div id="tela-agenda"hiddem>
+        <h1>Agenda diária</h1>
+        <div class="agenda-grid">
+            <div class="horario-card">09:00</div>
+             <div class="horario-card">10:00</div>
+              <div class="horario-card">11:00</div>
+               <div class="horario-card">14:00</div>
+                <div class="horario-card">15:00</div>
+                 <div class="horario-card">16:00</div>
+                  <div class="horario-card">17:00</div>
+                   <div class="horario-card">18:00</div>
+                    <div class="horario-card">19:00</div>
+                     <div class="horario-card">20:00</div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
     </div>
 </body>
 </html>
+
