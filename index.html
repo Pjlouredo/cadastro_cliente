@@ -132,38 +132,41 @@
         <div class="agenda-grid"><br>
             <div class="agenda-container-flex">
     <div class="coluna-barbeiro" id="col-louredo">
-        <div class="perfil-mini">
-            <img src="img/louredo.png" alt=""> <span>Louredo</span>
-        </div>
-        <div class="slots-horario">
-    <div class="agenda-linha">
-        <div class="hora">09:00</div>
-        <div class="campo-agendamento">
-            </div>
+    <div class="perfil-mini">
+        <img src="img/louredo.png" alt=""> <span>Louredo</span>
+    </div>
+    
+    <div class="agenda-linha" onclick="reservar(this, '08:00', 60)">
+        <div class="hora-container"><span>08:00</span></div>
+        <div class="campo-agendamento"></div>
+    </div>
+    
+    <div class="agenda-linha" onclick="reservar(this, '08:30', 30)">
+        <div class="hora-container"></div>
+        <div class="campo-agendamento"></div>
     </div>
 
-    <div class="agenda-linha ocupado">
-        <div class="hora">12:00</div>
-        <div class="campo-agendamento">Intervalo</div>
+    <div class="agenda-linha" onclick="reservar(this, '09:00', 60)">
+        <div class="hora-container"><span>09:00</span></div>
+        <div class="campo-agendamento"></div>
+    </div>
+
+    <div class="agenda-linha" onclick="reservar(this, '09:30', 30)">
+        <div class="hora-container"></div>
+        <div class="campo-agendamento"></div>
     </div>
 </div>
-    </div>
 
     <div class="coluna-barbeiro" id="col-euripedes">
         <div class="perfil-mini">
             <img src="img/euripedes.png" alt=""> <span>Eurípedes</span>
         </div>
-        <div class="slots-horario">
-    <div class="agenda-linha">
-        <div class="hora">09:00</div>
-        <div class="campo-agendamento">
-            </div>
-    </div>
-
-    <div class="agenda-linha ocupado">
-        <div class="hora">12:00</div>
-        <div class="campo-agendamento">Intervalo</div>
-    </div>
+        <div class="agenda-linha">
+    <div class="hora-container"><span>08:00</span></div>
+    <div class="campo-agendamento"></div>
+</div>
+<div class="agenda-linha">
+    <div class="hora-container"></div> <div class="campo-agendamento"></div>
 </div>
     </div>
 </div>
