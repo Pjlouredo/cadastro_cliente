@@ -114,20 +114,59 @@
         <button id="saveClient" type="submit">Salvar cliente</button><br><br>
     </form>
     </div>
+
     
-    <div id="tela-agenda"hiddem>
+    
+    <div id="tela-agenda" hidden>
+    <div class="header-agenda">
         <h1>Agenda diária</h1>
-        <div class="agenda-grid">
-            <div class="horario-card">09:00</div>
-             <div class="horario-card">10:00</div>
-              <div class="horario-card">11:00</div>
-               <div class="horario-card">14:00</div>
-                <div class="horario-card">15:00</div>
-                 <div class="horario-card">16:00</div>
-                  <div class="horario-card">17:00</div>
-                   <div class="horario-card">18:00</div>
-                    <div class="horario-card">19:00</div>
-                     <div class="horario-card">20:00</div>
+        <div class="agenda-filtros">
+            <select id="filtro-barbeiro">
+                <option value="profissional"></option>
+                <option value="louredo">Louredo</option>
+                <option value="euripedes">Eurípedes</option>
+                <option value="todos">Todos</option>
+            </select>
+        </div>
+    </div>
+        <div class="agenda-grid"><br>
+            <div class="agenda-container-flex">
+    <div class="coluna-barbeiro" id="col-louredo">
+        <div class="perfil-mini">
+            <img src="img/louredo.png" alt=""> <span>Louredo</span>
+        </div>
+        <div class="slots-horario">
+    <div class="agenda-linha">
+        <div class="hora">09:00</div>
+        <div class="campo-agendamento">
+            </div>
+    </div>
+
+    <div class="agenda-linha ocupado">
+        <div class="hora">12:00</div>
+        <div class="campo-agendamento">Intervalo</div>
+    </div>
+</div>
+    </div>
+
+    <div class="coluna-barbeiro" id="col-euripedes">
+        <div class="perfil-mini">
+            <img src="img/euripedes.png" alt=""> <span>Eurípedes</span>
+        </div>
+        <div class="slots-horario">
+    <div class="agenda-linha">
+        <div class="hora">09:00</div>
+        <div class="campo-agendamento">
+            </div>
+    </div>
+
+    <div class="agenda-linha ocupado">
+        <div class="hora">12:00</div>
+        <div class="campo-agendamento">Intervalo</div>
+    </div>
+</div>
+    </div>
+</div>
         </div>
     </div>
 

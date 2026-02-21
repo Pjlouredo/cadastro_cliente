@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-y: scroll; /* Força a barra de rolagem a aparecer sempre ✅ */
+}
+
 body {
     font-family: 'Montserrat', 'sans-serif';
     font-family: 'Montserrat', sans-serif;
@@ -46,7 +50,7 @@ body {
 .menu-lateral {
     position: fixed;
     left: 0;
-    top: 80px; /* Começa exatamente onde o topo termina */
+    top: 93px; /* Começa exatamente onde o topo termina */
     width: 250px;
     height: calc(100vh - 70px);
     background-color: #f4f4f4; /* Cor de fundo para o menu */
@@ -84,11 +88,11 @@ body {
     font-size: 1.1rem;
 }
 
-.container{
-    width: 95%;          
-    max-width: 850px;    
-    margin: 0px auto;
-    padding: 10px;
+.container {
+    margin-left: 250px;       /* Empurra para a direita do menu ➡️ */
+    margin-top: 70px;         /* Empurra para baixo do topo ⬇️ */
+    width: calc(100% - 250px); /* Ajusta a largura restante */
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -97,10 +101,10 @@ h1 {
     display: flex;    
     align-items: center;      
     justify-content: center;
-    width: auto;
+    width: 100%;             
     height: 50px;
-    margin-top: 80px;
-    font-size:large;
+    margin-top: 10px;         /* Espaço pequeno para não colar no topo ✅ */
+    font-size: large;
     text-align: center;
     background-color: #3e4f5f;
     border-radius: 10px;
@@ -256,6 +260,106 @@ input:checked + .slider::before {transform: translateX(26px);}
     width: fit-content;
     min-width: 200px;
 }
+
+.header-agenda {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.agenda-filtros {
+    position: absolute;
+    right: 15px;      /* Distância da borda direita conforme sua imagem */
+    top: 50%;         /* Sobe para o meio do H1 */
+    transform: translateY(-50%);
+}
+
+#filtro-barbeiro {
+    width: 16px;
+    height: 16px;             /* Um pouco menor */
+    padding: 0 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
+    background-color: white;
+    font-size: 13px;          /* Fonte menor */
+    font-weight: 400;         /* Tira o negrito ✅ */
+    color: #3e4f5f;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s;
+}
+
+#filtro-barbeiro:hover {
+    background-color: #f0f0f0; /* Efeito ao passar o mouse */
+}
+
+.agenda-container-flex {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.coluna-barbeiro {
+    flex: 1;
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.perfil-mini {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    border-bottom: 2px solid #3e4f5f;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.perfil-mini img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ccc; /* caso não tenha a imagem ainda */
+}
+
+.agenda-linha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    height: 45px;
+}
+
+.hora {
+    font-weight: bold;
+    color: #555;
+    width: 50px;
+}
+
+.campo-agendamento {
+    flex: 1;
+    height: 100%;
+    background-color: #f1f1f1; /* Cor cinza claro de fundo */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.campo-agendamento:hover { background-color: #e0e0e0; }
+
+/* Estilo para o Intervalo/Ocupado como na imagem */
+.ocupado .campo-agendamento {
+    background-color: #6a5a8c; /* Roxo do Gendo */
+    color: white;
+    justify-content: center;
+    padding-left: 0;
+}
+
 
 @media (max-width: 650px) {
        .form-row {
