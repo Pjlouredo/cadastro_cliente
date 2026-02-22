@@ -113,66 +113,11 @@
 
         <button id="saveClient" type="submit">Salvar cliente</button><br><br>
     </form>
-    </div>
-
-    
-    
+    </div>    
     <div id="tela-agenda" hidden>
     <div class="header-agenda">
         <h1>Agenda diária</h1>
-        <div class="agenda-filtros">
-            <select id="filtro-barbeiro">
-                <option value="profissional"></option>
-                <option value="louredo">Louredo</option>
-                <option value="euripedes">Eurípedes</option>
-                <option value="todos">Todos</option>
-            </select>
-        </div>
-    </div>
-        <div class="agenda-grid"><br>
-            <div class="agenda-container-flex">
-    <div class="coluna-barbeiro" id="col-louredo">
-    <div class="perfil-mini">
-        <img src="img/louredo.png" alt=""> <span>Louredo</span>
-    </div>
-    
-    <div class="agenda-linha" onclick="reservar(this, '08:00', 60)">
-        <div class="hora-container"><span>08:00</span></div>
-        <div class="campo-agendamento"></div>
-    </div>
-    
-    <div class="agenda-linha" onclick="reservar(this, '08:30', 30)">
-        <div class="hora-container"></div>
-        <div class="campo-agendamento"></div>
-    </div>
-
-    <div class="agenda-linha" onclick="reservar(this, '09:00', 60)">
-        <div class="hora-container"><span>09:00</span></div>
-        <div class="campo-agendamento"></div>
-    </div>
-
-    <div class="agenda-linha" onclick="reservar(this, '09:30', 30)">
-        <div class="hora-container"></div>
-        <div class="campo-agendamento"></div>
-    </div>
-</div>
-
-    <div class="coluna-barbeiro" id="col-euripedes">
-        <div class="perfil-mini">
-            <img src="img/euripedes.png" alt=""> <span>Eurípedes</span>
-        </div>
-        <div class="agenda-linha">
-    <div class="hora-container"><span>08:00</span></div>
-    <div class="campo-agendamento"></div>
-</div>
-<div class="agenda-linha">
-    <div class="hora-container"></div> <div class="campo-agendamento"></div>
-</div>
-    </div>
-</div>
-        </div>
-    </div>
-
+        
     <script src="script.js"></script>
     </div>
 </body>
